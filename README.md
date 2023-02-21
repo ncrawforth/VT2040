@@ -16,8 +16,7 @@ apk add git cmake gcc-arm-none-eabi g++ python3 make
 git clone https://github.com/raspberrypi/pico-sdk
 git clone https://github.com/ncrawforth/VT2040
 cd VT2040
-git submodule init
-git submodule update --remote
+git submodule update --init
 ```
 
 ### Build
