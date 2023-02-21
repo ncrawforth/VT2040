@@ -3,11 +3,21 @@ Portable serial terminal, based on an RP2040 dev board, with a [Gherkin keyboard
 
 ## Hardware
 
-Any RP2040 dev board with at least 19 GPIO pins (11 for the keyboard, 6 for the screen, 2 for serial) should work. I used a Waveshare RP2040 Zero.
+Any RP2040 dev board with at least 19 GPIO pins (11 for the keyboard, 6 for the screen, 2 for serial) should work.
 
 The screen is an ILI9488 480x320 LCD, which must be configured for 4-wire SPI. They usually have 14 pins at one end and 4 pins at the other.
 
 The keyboard is based on the 40percent.club Gherkin - just the main PCB, 30 1N4148 diodes, and 30 MX-compatible keyswitches.
+
+## Software
+
+The VT2040 software is made up of a handful of small, hopefully readable, reusable modules:
+
+* [VT2040-font](/ncrawforth/VT2040-font): an antialiased 6x13-pixel bitmap font.
+* [VT2040-term](/ncrawforth/VT2040-term): a small but full-featured terminal emulator.
+* [VT2040-lcd](/ncrawforth/VT2040-lcd): a PIO-based driver for the ILI9488 LCD.
+* [VT2040-keyb](/ncrawforth/VT2040-keyb): a keyboard driver.
+* [VT2040-serial](/ncrawforth/VT2040-serial): a PIO-based serial port, with special considerations for talking to an ESP8266.
 
 ## Prototype
 
@@ -18,6 +28,16 @@ The keyboard is based on the 40percent.club Gherkin - just the main PCB, 30 1N41
 ![Prototype](photos/3.jpg)
 
 The prototype gets about 18 hours out of 3 AA batteries. It has a socket for an ESP-01 - the one in the pictures has MicroPython installed. The keycaps are inexpensive relegendable ones, but they're not very comfortable to type on.
+
+The dev board is a Waveshare RP2040 Zero.
+
+The LCD's CS, RST, DC, MOSI, SCK and BL pins are connected to the GPIO pins configured in ``lcd.h``, and its 5V and GND are connected to the dev board's 5V and GND.
+
+The keyboard's 11 row and column pins are connected to the GPIO pins configured in ``keyb.h``. *TODO: add a photo showing the row and column pins on the keyboard PCB.*
+
+The ESP-01's RX and TX pins are connected directly to the pins configured in ``serial.h`` (both devices use 3.3V), its 3.3V and GND are connected to the dev board's 3.3V and GND, and its CH_PD pin is pulled high.
+
+Finally, the batteries are connected to the dev board's 5V and GND (through a switch). **There's nothing to prevent 5V being applied to the batteries when connected to USB, so turn off the switch to avoid damage.** *TODO: fix that with a trickle charge resistor or something.*
 
 ## Building
 
