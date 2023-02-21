@@ -8,7 +8,7 @@ These instructions are for Alpine Linux. Adjust them for your distro.
 ### Install the required packages
 As root:
 ```sh
-apk add git cmake gcc-arm-none-eabi g++ python3 make
+apk add git cmake gcc-arm-none-eabi g++ python3 newlib-arm-none-eabi make
 ```
 
 ### Download the VT2040 repositories
