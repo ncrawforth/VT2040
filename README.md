@@ -29,3 +29,6 @@ cd build
 cmake ..
 make
 ```
+
+### Install
+Press and hold the BOOTSEL button on the RP2040 dev board and plug it into your computer's USB port, then release BOOTSEL. It will appear as a USB drive. Copy vt2040.uf2 from the build directory onto it.
