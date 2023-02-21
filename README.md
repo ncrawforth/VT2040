@@ -22,6 +22,8 @@ git submodule update --init
 ### Assign the GPIO pins
 ``lcd.h``, ``keyb.h`` and ``serial.h`` contain pin assignments for the LCD, keyboard and serial port respectively. Change them to match your hardware.
 
+Depending on which way your LCD is mounted, you may need to change the value of ``LCD_ROTATE`` in ``lcd.h``.
+
 ### Build
 ```sh
 mkdir build
