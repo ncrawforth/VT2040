@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.13)
 
-include(../pico-sdk-master/pico_sdk_init.cmake)
+include(../pico-sdk/pico_sdk_init.cmake)
 
 project(vt2040)
 
