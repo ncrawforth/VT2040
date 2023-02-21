@@ -1,0 +1,20 @@
+[submodule "VT2040-lcd"]
+	path = VT2040-lcd
+	url = https://github.com/ncrawforth/VT2040-lcd
+	branch = main
+[submodule "VT2040-term"]
+	path = VT2040-term
+	url = https://github.com/ncrawforth/VT2040-term
+	branch = main
+[submodule "VT2040-keyb"]
+	path = VT2040-keyb
+	url = https://github.com/ncrawforth/VT2040-keyb
+	branch = main
+[submodule "VT2040-serial"]
+	path = VT2040-serial
+	url = https://github.com/ncrawforth/VT2040-serial
+	branch = main
+[submodule "VT2040-font"]
+	path = VT2040-font
+	url = https://github.com/ncrawforth/VT2040-font
+	branch = main
