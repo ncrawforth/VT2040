@@ -13,11 +13,11 @@ The keyboard is based on the 40percent.club Gherkin - just the main PCB, 30 1N41
 
 The VT2040 software is made up of a handful of small, hopefully readable, reusable modules:
 
-* [VT2040-font](/ncrawforth/VT2040-font): an antialiased 6x13-pixel bitmap font.
-* [VT2040-term](/ncrawforth/VT2040-term): a small but full-featured terminal emulator.
-* [VT2040-lcd](/ncrawforth/VT2040-lcd): a PIO-based driver for the ILI9488 LCD.
-* [VT2040-keyb](/ncrawforth/VT2040-keyb): a keyboard driver.
-* [VT2040-serial](/ncrawforth/VT2040-serial): a PIO-based serial port, with special considerations for talking to an ESP8266.
+* [VT2040-font](https://github.com/ncrawforth/VT2040-font): an antialiased 6x13-pixel bitmap font.
+* [VT2040-term](https://github.com/ncrawforth/VT2040-term): a small but full-featured terminal emulator.
+* [VT2040-lcd](https://github.com/ncrawforth/VT2040-lcd): a PIO-based driver for the ILI9488 LCD.
+* [VT2040-keyb](https://github.com/ncrawforth/VT2040-keyb): a keyboard driver.
+* [VT2040-serial](https://github.com/ncrawforth/VT2040-serial): a PIO-based serial port, with special considerations for talking to an ESP8266.
 
 ## Prototype
 
