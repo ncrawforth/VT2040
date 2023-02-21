@@ -1,5 +1,5 @@
 # VT2040
-Portable serial terminal, based on an RP2040 with a Gherkin keyboard and an ILI9488 screen
+Portable serial terminal, based on an RP2040 dev board, with a [Gherkin keyboard](https://www.40percent.club/2016/11/gherkin.html), an ILI9488 480x320 LCD screen, and a socket for an ESP-01.
 
 ## Building
 
