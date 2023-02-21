@@ -19,6 +19,9 @@ cd VT2040
 git submodule update --init
 ```
 
+### Assign the GPIO pins
+``lcd.h``, ``keyb.h`` and ``serial.h`` contain pin assignments for the LCD, keyboard and serial port respectively. Change them to match your hardware.
+
 ### Build
 ```sh
 mkdir build
