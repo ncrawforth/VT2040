@@ -11,7 +11,7 @@ As root:
 apk add git cmake gcc-arm-none-eabi g++ python3 newlib-arm-none-eabi make
 ```
 
-### Download the VT2040 repositories
+### Download the SDK and the VT2040 repositories
 ```sh
 git clone https://github.com/raspberrypi/pico-sdk
 git clone https://github.com/ncrawforth/VT2040
