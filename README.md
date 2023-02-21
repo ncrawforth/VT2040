@@ -1,5 +1,23 @@
 # VT2040
-Portable serial terminal, based on an RP2040 dev board, with a [Gherkin keyboard](https://www.40percent.club/2016/11/gherkin.html), an ILI9488 480x320 LCD screen, and a socket for an ESP-01.
+Portable serial terminal, based on an RP2040 dev board, with a [Gherkin keyboard](https://www.40percent.club/2016/11/gherkin.html) and an ILI9488 480x320 LCD screen.
+
+## Hardware
+
+Any RP2040 dev board with at least 19 GPIO pins (11 for the keyboard, 6 for the screen, 2 for serial) should work. I used a Waveshare RP2040 Zero.
+
+The screen is an ILI9488 480x320 LCD, which must be configured for 4-wire SPI. They usually have 14 pins at one end and 4 pins at the other.
+
+The keyboard is based on the 40percent.club Gherkin - just the main PCB, 30 1N4148 diodes, and 30 MX-compatible keyswitches.
+
+## Prototype
+
+![Prototype](photos/1.jpg)
+
+![Prototype](photos/2.jpg)
+
+![Prototype](photos/3.jpg)
+
+The prototype gets about 18 hours out of 3 AA batteries. It has a socket for an ESP-01 - the one in the pictures has MicroPython installed. The keycaps are inexpensive relegendable ones, but they're not very comfortable to type on.
 
 ## Building
 
