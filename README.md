@@ -3,9 +3,27 @@ Portable serial terminal, based on an RP2040 with a Gherkin keyboard and an ILI9
 
 ## Building
 
-These instructions are for Alpine Linux. Adjust them for your distro, or create an Alpine Linux chroot:
+These instructions are for Alpine Linux. Adjust them for your distro.
+
+### Install the required packages
+As root:
 ```sh
-mkdir alpine-linux
-curl https://dl-cdn.alpinelinux.org/alpine/v3.17/releases/x86_64/alpine-minirootfs-3.17.1-x86_64.tar.gz | tar xzC alpine-linux
-chroot alpine-linux
+apk add git cmake gcc-arm-none-eabi g++ python3 make
+```
+
+### Download the VT2040 repositories
+```sh
+git clone https://github.com/raspberrypi/pico-sdk
+git clone https://github.com/ncrawforth/VT2040
+cd VT2040
+git submodule init
+git submodule update --remote
+```
+
+### Build
+```sh
+mkdir build
+cd build
+cmake ..
+make
 ```
