@@ -54,7 +54,7 @@ apk add git cmake gcc-arm-none-eabi g++ python3 newlib-arm-none-eabi make
 git clone https://github.com/raspberrypi/pico-sdk
 git clone https://github.com/ncrawforth/VT2040
 cd VT2040
-git submodule update --init
+git submodule update --init --remote
 ```
 
 ### Assign the GPIO pins
